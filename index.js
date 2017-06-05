@@ -1,6 +1,7 @@
 'use strict'
 var mongoose = require('mongoose');
 var app      = require('./app');
+const port = process.env.PORT || 3765;
 
 mongoose.connect('mongodb://localhost:27017/albums', (err, res) => {
     if (err) {
@@ -8,7 +9,7 @@ mongoose.connect('mongodb://localhost:27017/albums', (err, res) => {
     } else {
         console.log('Database server running...');
     }
-    app.listen(3765, function() {
-            console.log('App listening on port: 3765');
+    app.listen(port, function() {
+            console.log('App listening on port: '+port);
     });
 });
