@@ -12,6 +12,6 @@ mongoose.connect('mongodb://admin:th3r4v3n@ds163721.mlab.com:63721/albums', (err
     }
     app.listen(port, function() {
             console.log('App listening on port: '+port);
-            res.send('You are connected');
+            res.status(200).send({message: 'You are connected'});
     });
 });
