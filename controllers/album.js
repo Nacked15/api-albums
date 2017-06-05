@@ -78,25 +78,6 @@ function deleteAlbum(req, res){
             }
         }
     });
-
-    // Album.findById(albumId, (err, album) =>{
-    //     if (err) {
-    //         res.status(500).send({message: 'Error al devolver el album'});
-    //     } else {
-    //         if (!album) {
-    //             res.status(404).send({message: 'El album no existe'});
-    //         }else{
-    //             album.remove(err => {
-    //                 if (err) {
-    //                     res.status(500).send({message: 'Error en la petición'});
-    //                 } else {
-    //                     res.status(200).send({message: 'Album eliminado!!'});
-    //                 }               
-    //             });
-                
-    //         }
-    //     }
-    // });
 }
 
 module.exports = {
