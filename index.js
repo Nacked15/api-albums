@@ -2,8 +2,9 @@
 var mongoose = require('mongoose');
 var app      = require('./app');
 const port = process.env.PORT || 3765;
-
-mongoose.connect('mongodb://localhost:27017/albums', (err, res) => {
+// mongodb://<dbuser>:<dbpassword>@ds163721.mlab.com:63721/albums
+// mongodb://localhost:27017/albums
+mongoose.connect('mongodb://admin:th3r4v3n@ds163721.mlab.com:63721/albums', (err, res) => {
     if (err) {
         throw err;
     } else {
