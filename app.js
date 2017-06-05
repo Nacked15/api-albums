@@ -22,6 +22,9 @@ app.use((req, res, next) =>{
 });
 
 //Rutas base
+app.get('/', function (req, res) {
+    res.send('Server is running');
+});
 app.use('/api', album_routes);
 app.use('/api', image_routes);
 
