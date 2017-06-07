@@ -116,8 +116,8 @@ function uploadImage(req, res){
         var file_split = file_path.split('\\');
         var file_name  = file_split[1];
 
-        // console.log(file_path);
-        // console.log(file_name);
+        console.log(file_path);
+        console.log(file_name);
         Image.findByIdAndUpdate(imageId, {picture: file_name}, (err, imageUpdated) => {
             if (err) {
                 res.status(500).send({message: 'Error al actualizar'});
